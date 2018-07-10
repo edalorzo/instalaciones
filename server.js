@@ -177,7 +177,7 @@ var DalorzoApp = function() {
                 from: util.format("%s <%s>", data.name, 'ventas@dalorzo.com'),
                 replyTo: util.format("%s <%s>", data.name, data.from),
                 to: "ventas@dalorzo.com",
-                cc:"Edwin Dalorzo <edwin@dalorzo.com>, Yamileth Dalorzo <ydalorzo@hotmail.com>",
+                cc:"Edwin Dalorzo <edwin@dalorzo.com>",
                 subject: "Solicitud de Información",
                 text: data.message
             };
