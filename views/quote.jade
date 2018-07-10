@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    div.row(style="margin-bottom: 15px")
+        div.col-md-12(ng-controller="MainCtrl")
+            h2.title-divider
+                span Cotización
+                small Envíenos un mensaje
+            div.row
+                div.col-md-12
+                    p
+                        | Si nos proporciona sus datos nos pondremos en contacto con usted a la mayor brevedad posible.
+            div.row
+                div.col-md-6
+                    form#contact-form(name="contactForm", role="form", novalidate="true")
+                        div.form-group(ng-class="{'has-error':contactForm.$invalid && contactForm.$dirty}")
+                            label.sr-only(for="contact-name") Nombre
+                            input#contact-name.form-control(type="text", placeholder="Nombre", ng-required="true" ng-model="contact.name")
+                        div.form-group(ng-class="{'has-error':contactForm.$invalid && contactForm.$dirty}")
+                            label.sr-only(for="contact-email") Correo Electrónico
+                            input#contact-email.form-control(type="email", placeholder="Correo electrónico", ng-model="contact.email")
+                        div.form-group(ng-class="{'has-error':contactForm.$invalid && contactForm.$dirty}")
+                            label.sr-only(for="contact-phone") Teléfono
+                            input#contact-phone.form-control(type="tel", placeholder="Teléfono", ng-required="true", ng-model="contact.phone")
+                        div.form-group
+                            label.sr-only(for="contact-message") Mensaje
+                            textarea#contact-message.form-control(rows="6", placeholder="Mensaje", ng-model="contact.message")
+                        input.btn.btn-primary(type="submit", ng-disabled="sending", value="Enviar Mensaje", ng-click="sendEmail(contactForm.$valid)")
+    div.row
+        div.col-md-12
+            span &nbsp;
+
+
+
+
+
+
+
+
+

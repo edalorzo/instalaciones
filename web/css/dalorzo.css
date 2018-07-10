@@ -1,0 +1,6 @@
+.alertify-logs {
+    bottom: 150px;
+    width: 250px;
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

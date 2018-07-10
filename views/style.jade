@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    div.row(style="margin-bottom: 15px")
+        div.col-md-12
+            h2.title-divider
+                span Estilo de Teja #{style}
+                small
+                    a(href="/") Regresar
+        div.row
+            div.col-lg-9
+                img(src="/img/shingles/#{style.toLowerCase()}-large.png", width="800",height="800")
+            div.col-lg-2
+                table
+                    - for style in styles
+                        tr
+                            td
+                                a.thumbnail(href="/tejas/#{style}.html", title="Teja Asfáltica Estilo #{style}")
+                                    img(src="/img/shingles/#{style.toLowerCase()}-small@2x.png", alt="Teja Asfáltica Estilo #{style}", width="250",height="250")
+                                    span Teja Estilo #{style}
+
+
+
+
+

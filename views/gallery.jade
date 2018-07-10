@@ -1,0 +1,46 @@
+extends layout
+
+block content
+    div.row(style="margin-bottom: 15px")
+        div.col-md-12
+            h2.title-divider
+                span Galería de Fotos
+                small Nuestro trabajo es nuestra carta de presentación
+
+    div.row
+        div.col-md-6
+            p
+                | Trabajamos bajo los más rigurosos estándares de calidad y recomendaciones directas de los
+                | fabricantes, brindándole garantía y seguridad a nuestros clientes tanto por los materiales
+                | como por la instalación.
+            p
+                | Con más de 27 años de realizar instalaciones, los últimos 8 años en Costa Rica,
+                | hemos recorrido prácticamente todo el país, brindamos una experiencia invaluable en las
+                | diferentes condiciones climáticas de la región. Contamos con un personal altamente calificado,
+                | entrenado para realizar un trabajo eficaz, eficiente, con alta calidad y rapidez.
+            p
+                | Contamos con herramientas modernas y todos nuestros empleados han sido debidamente entrenados
+                | y están listos para realizar un trabajo de primera.
+            p
+                | Puede estar seguro que que la inversión del techo de su casa está asegurada con nosotros.
+                | Y usted será uno más de nuestros clientes satisfechos. Nuestro trabajo está garantizado.
+            p
+                a(href="/cotizar.html") Contáctenos
+                | &nbsp;, la cotización no tiene ningún costo y para nosotros será un placer atenderle.
+
+        div.col-md-6
+            div
+                div(ng-controller="RoofGalleryCtrl")
+                    carousel(interval="myInterval")
+                        slide(ng-repeat="slide in slides", active="slide.active")
+                            img(ng-src="{{slide.image}}", style="margin:auto")
+                            div.carousel-caption
+                                p
+                                    | {{slide.text}}
+
+        div.row
+            div.col-md-12
+                span &nbsp;
+
+
+
