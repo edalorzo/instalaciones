@@ -35,7 +35,7 @@ var DalorzoApp = function() {
             port: 465,
             auth: {
                 user: "ventas@dalorzo.com",
-                pass: "4Yj6R7dpP)tM32s"
+                pass: "ugnhlkxagyhubbwd"
             }
         };
         self.transport = nodemailer.createTransport(mailOptions);
