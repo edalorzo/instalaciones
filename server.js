@@ -30,12 +30,12 @@ var DalorzoApp = function() {
         self.port      = process.env.PORT || 5000;        
 
         var mailOptions = {
-            host: "smtp.bizmail.yahoo.com",
+            host: "smtp.zoho.com",
             secureConnection: true,
             port: 465,
             auth: {
                 user: "ventas@dalorzo.com",
-                pass: "ugnhlkxagyhubbwd"
+                pass: process.env['SMTP.PASSWORD']
             }
         };
         self.transport = nodemailer.createTransport(mailOptions);
